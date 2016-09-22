@@ -1,0 +1,47 @@
+# Site settings
+title: shinoのspace
+description: 'shino.space - shino 的个人网站'
+url: 'https://shino.space'
+baseurl: '/'
+# google_analytics: 'UA-XXXXXX-X'
+
+author:
+  name: 'shino'
+  email: shino@shino.space
+  twitter_username: shino_996
+  github_username:  q852217956
+
+defaults:
+  -
+    scope:
+      path: ''
+      type: 'posts'
+    values:
+        layout: 'post'
+
+# Build settings
+destination: _site
+paginate: 10
+permalink: /:year/:title/
+markdown: kramdown
+highlighter: rouge
+
+kramdown:
+  # use Github Flavored Markdown
+  input: GFM
+  # do not replace newlines by <br>s
+  hard_wrap: false
+
+  syntax_hghlighter: rouge
+
+  syntax_highlighter_opts:
+
+    span:
+      line_numbers: false
+
+    block:
+      line_numbers: true
+      start_line: 1
+
+gems: ['jekyll-paginate']
+exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'screenshot.png']

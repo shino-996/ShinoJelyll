@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>C++中的lambda表达式</title>
+  <meta name="description" content="shino.space - shino 的个人网站">
+  <meta name="author" content="shino">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="shinoのspace">
+  <meta name="twitter:description" content="shino.space - shino 的个人网站">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="shinoのspace">
+  <meta property="og:description" content="shino.space - shino 的个人网站">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/images/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.png" sizes="194x194">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/images/favicons/manifest.json">
+  <link rel="shortcut icon" href="/images/favicons/favicon.ico">
+  <meta name="msapplication-TileColor" content="#ffc40d">
+  <meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png">
+  
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://shino.space//2016/C-%E4%B8%AD%E7%9A%84lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
+  <link rel="alternate" type="application/rss+xml" title="shinoのspace" href="/feed.xml">
+</head>
+
+
+  <body>
+    <span class="mobile btn-mobile-menu">
+  <i class="icon icon-list btn-mobile-menu__icon"></i>
+  <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+</span>
+  
+<header class="panel-cover" style="background-image: url(/images/cover.jpg)">
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+      <div class="panel-main__content">
+        <a href="/" title="link to home of shinoのspace">
+          <img src="/images/profile.jpg" class="user-image" alt="My Profile Photo">
+          <h1 class="panel-cover__title panel-title">shinoのspace</h1>
+        </a>
+        <hr class="panel-cover__divider">
+        <p class="panel-cover__description">shino.space - shino 的个人网站</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary">
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+              <li class="navigation__item"><a href="/#blog" class="blog-button">文章</a></li>
+            </ul>
+
+            <ul class="navigation">
+              <li class="navigation__item"><a href="/#blog" class="blog-button">关于</a></li>
+            </ul>
+
+            <ul class="navigation">
+              <li class="navigation__item"><a href="/tags/" class="blog-button">归档</a></li>
+            </ul>
+          </nav>
+
+          <div>
+
+          <nav class="cover-navigation navigation--social">
+            <ul class="navigation">
+          
+           
+              <!-- Twitter -->
+              <li class="navigation__item">
+                <a href="http://twitter.com/shino_996" title="@shino_996 on Twitter" target="_blank">
+                  <i class="icon icon-social-twitter"></i>
+                  <span class="label">Twitter</span>
+                </a>
+              </li>
+            
+
+            
+              <!-- GitHub -->
+              <li class="navigation__item">
+                <a href="https://www.github.com/q852217956" title="q852217956 on GitHub" target="_blank">
+                  <i class="icon icon-social-github"></i>
+                  <span class="label">GitHub</span>
+                </a>
+              </li>
+            
+
+            
+              <!-- Email -->
+              <li class="navigation__item">
+                <a href="mailto:shino@shino.space" title="Email shino@shino.space" target="_blank">
+                  <i class="icon icon-mail"></i>
+                  <span class="label">Email</span>
+                </a>
+              </li>
+            
+
+            </ul>
+          </nav>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+
+    <div class="content-wrapper">
+      <div class="content-wrapper__inner">
+        <article class="post-container post-container--single">
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="25 Mar 2016" class="post-meta__date date">25 Mar 2016</time> &#8226; <span class="post-meta__tags">on <a href="/tags/#计算机">计算机</a> </span>
+    </div>
+    <h1 class="post-title">C++中的lambda表达式</h1>
+  </header>
+
+  <section class="post">
+    <p>最近学习<code class="highlighter-rouge">cocos2d-x</code>的时候经常在触摸事件中看到<code class="highlighter-rouge">lambda表达式</code>，类似于<code class="highlighter-rouge">swift</code>中的闭包和<code class="highlighter-rouge">Objective-C</code>中的<code class="highlighter-rouge">block</code>。</p>
+
+<!--more-->
+
+<blockquote>
+  <p>好像好久都没有更新了，（~~强行~~）最近好忙呢【</p>
+</blockquote>
+
+<hr />
+
+<blockquote>
+  <p>以下程序使用clang编译，采用C11标准，如果读者和我一样使用clang手动编译，注意加上<code class="highlighter-rouge">-stdlib=libc++</code>和<code class="highlighter-rouge">-std=c++11</code>选项使用C11标准库</p>
+</blockquote>
+
+<h3 id="section">函数</h3>
+
+<p>lambda表达式其实就是从其他语言中的闭包借鉴来的，本质上就是匿名的函数。写程序肯定离不开是用函数和自己写函数。函数把可以实现一定功能的代码封装到一起，一方面可以增加代码的复用，另一方面也可以是程序层次分明，便于阅读。为了调用函数，在定义函数的时候都会定义函数名。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8</pre></td><td class="code"><pre><span class="c1">//定义函数名为"func_1"的函数
+</span><span class="kt">int</span> <span class="nf">func_1</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">a</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">//调用函数
+</span><span class="n">func_1</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<h3 id="section-1">函数调用</h3>
+
+<p>除了使用函数名进行函数调用，为了增加程序的灵活性和实现泛型，C++中也可以使用我们熟悉的<code class="highlighter-rouge">函数指针</code>和<code class="highlighter-rouge">function函数模板</code>来调用函数。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8</pre></td><td class="code"><pre><span class="c1">//使用函数指针调用"func_1"
+</span><span class="kt">int</span> <span class="p">(</span><span class="o">*</span><span class="n">p</span><span class="p">)(</span><span class="kt">int</span><span class="p">)</span> <span class="o">=</span> <span class="n">func_1</span><span class="p">;</span>
+<span class="p">(</span><span class="o">*</span><span class="n">p</span><span class="p">)(</span><span class="mi">10</span><span class="p">);</span>
+
+<span class="c1">//使用function模板调用"func_1"
+</span><span class="n">function</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">func</span><span class="p">;</span>
+<span class="n">func</span> <span class="o">=</span> <span class="n">func_1</span><span class="p">;</span>
+<span class="n">fun</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+<p>### 熟悉的sort函数</p>
+
+<p>有时候函数写好之后就直接调用，并且似乎只调用了一次就再也没使用过。这种情况下，不定义函数会显得程序结构混乱，写了函数又感觉没什么必要。最常见的场景就是sort函数，基本上所有讲闭包的文章都会提sort函数。</p>
+
+<p><code class="highlighter-rouge">sort</code>函数接受三个参数，<code class="highlighter-rouge">begin</code>、<code class="highlighter-rouge">end</code>分别是需要排序数组的头尾，<code class="highlighter-rouge">compare</code>是一个返回值为<code class="highlighter-rouge">bool compare(obj1, obj2)</code>的函数，决定排序的方式（升序或降序，以及如何比较两个元素大小）。sort函数运行时在需要排序的数组中分别取出两个元素作为参数调用compare函数比较，然后写回原数组。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10</pre></td><td class="code"><pre><span class="c1">//定义compare函数
+</span><span class="n">bool</span> <span class="nf">compare</span><span class="p">(</span><span class="kt">int</span> <span class="n">num_1</span><span class="p">,</span> <span class="kt">int</span> <span class="n">num_2</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">num_1</span> <span class="o">&lt;</span> <span class="n">num_</span> <span class="mi">2</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="n">array</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">};</span>
+
+<span class="c1">//对array排序
+</span><span class="n">sort</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">array</span> <span class="o">+</span> <span class="mi">3</span><span class="p">,</span> <span class="n">compare</span><span class="p">);</span>
+<span class="c1">//array = (1, 2, 4, 6)
+</span></pre></td></tr></tbody></table>
+</div>
+</div>
+
+<p>sort函数这样写的确能够增加排序的方式，不过compare函数与sort函数的调用是分离的，阅读上会有些困难，并且compare函数只使用了一次就不再使用。在这种情况下，我们就迫切需要一种定义和使用可以在一起，但又不回过多影响阅读的结构。</p>
+
+<h3 id="lambda">lambda表达式</h3>
+
+<p>基于上述原因，lambda表达式出现了，先看一下lambda表达式的格式</p>
+
+<p><code class="highlighter-rouge">[捕获值](参数列表) -&gt; 返回值 {函数体}</code></p>
+
+<h4 id="section-2">捕获值</h4>
+
+<p>lambda表达式可以直接使用上文定义的变量，这个过程叫做<code class="highlighter-rouge">捕获</code>，同参数传递相同，捕获分为<code class="highlighter-rouge">值传递</code>和<code class="highlighter-rouge">引用传递</code>，也可以指定只捕获某几个变量。</p>
+
+<p><strong>使用应用传递时，如果要更改外部变量，需要在参数列表后加上<code class="highlighter-rouge">mutable</code>关键字</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30</pre></td><td class="code"><pre><span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
+<span class="c1">//值传递使用a,b，其实默认[]就是值传递
+</span><span class="p">[</span><span class="o">=</span><span class="p">](</span><span class="kt">int</span> <span class="n">num</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">int</span> <span class="p">{</span>
+    <span class="n">a</span> <span class="o">+=</span> <span class="mi">10</span><span class="p">;</span>
+    <span class="n">b</span> <span class="o">+=</span> <span class="mi">100</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="n">num</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="c1">//引用传递使用a,b
+</span><span class="p">[</span><span class="o">&amp;</span><span class="p">](</span><span class="kt">int</span> <span class="n">num</span><span class="p">)</span><span class="k">mutable</span> <span class="o">-&gt;</span> <span class="kt">int</span> <span class="p">{</span>
+    <span class="n">a</span> <span class="o">+=</span> <span class="mi">10</span><span class="p">;</span>
+    <span class="n">b</span> <span class="o">+=</span><span class="mi">100</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="n">num</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="c1">//值传递使用a，引用传递使用b
+</span><span class="p">[</span><span class="n">a</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">](</span><span class="kt">int</span> <span class="n">num</span><span class="p">)</span><span class="k">mutable</span> <span class="o">-&gt;</span> <span class="kt">int</span> <span class="p">{</span>
+    <span class="n">a</span> <span class="o">+=</span> <span class="mi">10</span><span class="p">;</span>
+    <span class="n">b</span> <span class="o">+=</span> <span class="mi">100</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="n">num</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="c1">//只使用a，引用传递
+</span><span class="p">[</span><span class="o">&amp;</span><span class="n">a</span><span class="p">](</span><span class="kt">int</span> <span class="n">num</span><span class="p">)</span><span class="k">mutable</span> <span class="o">-&gt;</span> <span class="kt">int</span> <span class="p">{</span>
+    <span class="n">a</span> <span class="o">+=</span> <span class="mi">10</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">num</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="c1">//各个表达式调用结果就不用多说了吧
+</span></pre></td></tr></tbody></table>
+</div>
+</div>
+<p>#### 参数列表、返回值、函数体</p>
+
+<p>和函数相同，没什么可以多说的…</p>
+
+<p>不过除了<code class="highlighter-rouge">捕获值</code>和<code class="highlighter-rouge">函数体</code>之外，其他的部分都可以根据情况省略掉，编译的时候会根据上下文推导出来。</p>
+
+<h3 id="lambda-1">lambda表达式的调用</h3>
+
+<h4 id="section-3">直接调用</h4>
+
+<p>可以把lambda表达式整体看成是函数名，后面加上参数就可以直接调用</p>
+
+<div class="highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="p">[](</span><span class="kt">int</span> <span class="n">num</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">int</span> <span class="p">{</span><span class="k">return</span> <span class="n">num</span><span class="p">}</span> <span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+
+<h4 id="section-4">像函数一样调用</h4>
+
+<p>之前也说明了，lambda表达式本质上是匿名函数，自然能够用调用函数的方法去调用。对于函数指针，要求lambda表达式没有捕获外部变量；而对于function模板就无所谓了，也可以使用auto自动推断。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24</pre></td><td class="code"><pre><span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+
+<span class="c1">//函数指针调用
+</span><span class="kt">int</span> <span class="p">(</span><span class="o">*</span><span class="n">p</span><span class="p">)</span> <span class="o">=</span> <span class="p">[</span><span class="o">=</span><span class="p">](</span><span class="kt">int</span> <span class="n">num</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">int</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">num</span><span class="p">;</span>
+<span class="p">};</span> <span class="c1">//错误，函数指针调用的函数不能直接使用外部变量
+</span>
+<span class="kt">int</span> <span class="p">(</span><span class="o">*</span><span class="n">p2</span><span class="p">)</span> <span class="o">=</span> <span class="p">[](</span><span class="kt">int</span> <span class="n">num</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">num</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="p">(</span><span class="o">*</span><span class="n">p_2</span><span class="p">)(</span><span class="mi">10</span><span class="p">);</span><span class="c1">//正确调用
+</span>
+<span class="c1">//function模板调用
+</span><span class="n">function</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="o">&gt;</span><span class="n">func</span><span class="p">;</span>
+<span class="n">func</span> <span class="o">=</span> <span class="p">[</span><span class="o">=</span><span class="p">](</span><span class="kt">int</span> <span class="n">num</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">int</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">num</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="n">func</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+
+<span class="c1">//auto自动判断lambda表达式类型
+</span><span class="k">auto</span> <span class="n">func_2</span> <span class="o">=</span> <span class="p">[</span><span class="o">=</span><span class="p">](</span><span class="kt">int</span> <span class="n">num</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">int</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">num</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="n">func_2</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+<p>### 再回到sort函数</p>
+
+<p>知道了lambda表达式的使用之后就可以解决之前在sort函数中遇到的问题了</p>
+
+<div class="highlighter-rouge"><div class="highlight"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4</pre></td><td class="code"><pre><span class="kt">int</span> <span class="n">array</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">};</span>
+<span class="n">sort</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">array</span> <span class="o">+</span> <span class="mi">3</span><span class="p">,</span> <span class="p">[](</span><span class="kt">int</span> <span class="n">num_1</span><span class="p">,</span> <span class="kt">int</span> <span class="n">num_2</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">bool</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">num_1</span> <span class="o">&lt;</span> <span class="n">num_2</span><span class="p">;</span>
+<span class="p">});</span>
+</pre></td></tr></tbody></table>
+</div>
+</div>
+<p>是不是比刚才简洁不少，阅读器来也不是那么困难→_→（如果想swift一样可以尾随闭包就更好了）</p>
+
+<p>除了向sort函数或者各种交互事件等需要回调函数的场景，我们在写函数的时候也可以试着使用lambda表达式，比如利用lambda表达式传值之类的，简化代码。</p>
+
+  </section>
+</article>
+<script data-isso="//localhost/isso/"
+        src="//localhost/isso/js/embed.min.js"></script>
+<section id="isso-thread"></section>
+
+      </div>
+
+      <footer class="footer">
+  <span class="footer__copyright">&copy; 2016-2016 shino. All rights reserved.</span>
+</footer> 
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+    </div>
+  </body>
+</html>
