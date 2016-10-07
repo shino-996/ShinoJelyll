@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh">
   <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width initial-scale=1" />
@@ -15,11 +15,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="shinoのspace">
+  <meta name="twitter:title" content="shino">
   <meta name="twitter:description" content="shino.space - shino 的个人网站">
 
   <meta property="og:type" content="article">
-  <meta property="og:title" content="shinoのspace">
+  <meta property="og:title" content="shino">
   <meta property="og:description" content="shino.space - shino 的个人网站">
 
   <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.png">
@@ -45,7 +45,7 @@
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="https://shino.space//2016/C-%E4%B8%AD%E7%9A%84lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
-  <link rel="alternate" type="application/rss+xml" title="shinoのspace" href="/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="shino" href="/feed.xml">
 </head>
 
 
@@ -60,9 +60,9 @@
 
     <div class="panel-main__inner panel-inverted">
       <div class="panel-main__content">
-        <a href="/" title="link to home of shinoのspace">
+        <a href="/" title="link to home of shino">
           <img src="/images/profile.jpg" class="user-image" alt="My Profile Photo">
-          <h1 class="panel-cover__title panel-title">shinoのspace</h1>
+          <h1 class="panel-cover__title panel-title">shino</h1>
         </a>
         <hr class="panel-cover__divider">
         <p class="panel-cover__description">shino.space - shino 的个人网站</p>
@@ -76,7 +76,7 @@
             </ul>
 
             <ul class="navigation">
-              <li class="navigation__item"><a href="/#blog" class="blog-button">关于</a></li>
+              <li class="navigation__item"><a href="/2016/%E5%85%B3%E4%BA%8Eshino-space/" class="blog-button">关于</a></li>
             </ul>
 
             <ul class="navigation">
@@ -85,7 +85,6 @@
           </nav>
 
           <div>
-
           <nav class="cover-navigation navigation--social">
             <ul class="navigation">
           
@@ -94,6 +93,16 @@
               <li class="navigation__item">
                 <a href="http://twitter.com/shino_996" title="@shino_996 on Twitter" target="_blank">
                   <i class="icon icon-social-twitter"></i>
+                  <span class="label">Twitter</span>
+                </a>
+              </li>
+            
+
+            
+              <!-- QQZone -->
+              <li class="navigation__item">
+                <a href="http://user.qzone.qq.com/852217956" title="@852217956 on QQZone" target="_blank">
+                  <i class="icon icon-social-qqzone"></i>
                   <span class="label">Twitter</span>
                 </a>
               </li>
@@ -121,15 +130,10 @@
 
             </ul>
           </nav>
-
           </div>
-
         </div>
-
       </div>
-
     </div>
-
     <div class="panel-cover--overlay"></div>
   </div>
 </header>
@@ -310,7 +314,8 @@
 </span></pre></td></tr></tbody></table>
 </div>
 </div>
-<p>#### 参数列表、返回值、函数体</p>
+
+<h4 id="section-3">参数列表、返回值、函数体</h4>
 
 <p>和函数相同，没什么可以多说的…</p>
 
@@ -318,7 +323,7 @@
 
 <h3 id="lambda-1">lambda表达式的调用</h3>
 
-<h4 id="section-3">直接调用</h4>
+<h4 id="section-4">直接调用</h4>
 
 <p>可以把lambda表达式整体看成是函数名，后面加上参数就可以直接调用</p>
 
@@ -327,7 +332,7 @@
 </div>
 </div>
 
-<h4 id="section-4">像函数一样调用</h4>
+<h4 id="section-5">像函数一样调用</h4>
 
 <p>之前也说明了，lambda表达式本质上是匿名函数，自然能够用调用函数的方法去调用。对于函数指针，要求lambda表达式没有捕获外部变量；而对于function模板就无所谓了，也可以使用auto自动推断。</p>
 
@@ -381,7 +386,8 @@
 </pre></td></tr></tbody></table>
 </div>
 </div>
-<p>### 再回到sort函数</p>
+
+<h3 id="sort">再回到sort函数</h3>
 
 <p>知道了lambda表达式的使用之后就可以解决之前在sort函数中遇到的问题了</p>
 
@@ -395,15 +401,27 @@
 </pre></td></tr></tbody></table>
 </div>
 </div>
+
 <p>是不是比刚才简洁不少，阅读器来也不是那么困难→_→（如果想swift一样可以尾随闭包就更好了）</p>
 
 <p>除了向sort函数或者各种交互事件等需要回调函数的场景，我们在写函数的时候也可以试着使用lambda表达式，比如利用lambda表达式传值之类的，简化代码。</p>
 
   </section>
 </article>
-<script data-isso="//localhost/isso/"
-        src="//localhost/isso/js/embed.min.js"></script>
+<div>
+<script data-isso="//shino.space/isso/"
+        data-isso-css="true"
+        data-isso-reply-to-self="false"
+        data-isso-require-author="false"
+        data-isso-require-email="false"
+        data-isso-max-comments-top="5"
+        data-isso-reveal-on-click="5"
+        data-isso-avatar="true"
+        data-isso-vote="true"
+        data-vote-levels=""
+        src="//shino.space/isso/js/embed.min.js"></script>
 <section id="isso-thread"></section>
+</div>
 
       </div>
 
@@ -414,6 +432,34 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script type="text/javascript" src="/js/main.js"></script>
 
+<!-- Google AnaLytics -->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-78168136-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+<!-- Baidu Push -->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
     </div>
   </body>
 </html>

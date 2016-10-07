@@ -38,8 +38,7 @@ table {
     border-spacing: 0; }
 
 body {
-    width: 100%;
-    *zoom: 1; }
+    width: 100%; }
     body:before, body:after {
         content: "";
         display: table; }
@@ -722,7 +721,7 @@ body {
 .icon-social-skillshare:before {
     content: "\f1d9"; }
 
-.icon-social-skype:before {
+.icon-social-qqzone:before {
     content: "\f1da"; }
 
 .icon-social-smashing-mag:before {
@@ -1138,7 +1137,6 @@ pre {
         .footer__copyright a:hover {
             color: #b9301c; }
 
-.avatar,
 .logo {
     border-radius: 50%;
     border: 3px solid #FFF;

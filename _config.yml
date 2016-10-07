@@ -1,15 +1,16 @@
 # Site settings
-title: shinoのspace
+title: shino
 description: 'shino.space - shino 的个人网站'
 url: 'https://shino.space'
 baseurl: '/'
-# google_analytics: 'UA-XXXXXX-X'
+google_analytics: 'UA-78168136-1'
 
 author:
   name: 'shino'
   email: shino@shino.space
   twitter_username: shino_996
-  github_username:  q852217956
+  github_username: q852217956
+  qq: 852217956
 
 defaults:
   -
@@ -27,18 +28,12 @@ markdown: kramdown
 highlighter: rouge
 
 kramdown:
-  # use Github Flavored Markdown
-  input: GFM
-  # do not replace newlines by <br>s
-  hard_wrap: false
-
+  input: kramdown
   syntax_hghlighter: rouge
-
   syntax_highlighter_opts:
-
+    default_lang: text
     span:
       line_numbers: false
-
     block:
       line_numbers: true
       start_line: 1
