@@ -52,9 +52,10 @@ $ sudo npm install hexo-cli -g
 $ hexo init
 $ npm install
 ~~~
+
 之后打开刚才的文件夹，会看到这样的结构
 
-~~~ plain
+~~~ text
 .
 ├── _config.yml     //hexo配置文件
 ├── node_modules     //node.js运行库
@@ -102,7 +103,7 @@ hexo new '文章名称'
 
 之后就会在`source/_posts/`下生成一个文件，文件名就是我么所命名的，后缀为`.md`，因为hexo的博客使用`markdown`语法书写，至于怎么写markdown，之后会介绍的。文章名称不加单引号也可以，不过名称中有空格的时候必须加单引号。
 
-~~~ plain
+~~~ text
 ---
 title: test
 date: 2016-03-05 14:56:52
@@ -112,7 +113,7 @@ tags:
 
 打开建好的文章后，会看到上面的字样，分别是标题、日期和标签。注意不要更改标题名称，新建文章的时候hexo根据标题建立了目录，更改了文章文件的标题会导致hexo错误。如果想更换标题，只能删掉重建。标签可以任意添加，便于归类文章，不同的主题对标签的实现方法也不一样。如果想写多个标签，可以这样书写
 
-~~~plain
+~~~ text
 tags:
 
 - tag1
@@ -128,7 +129,7 @@ hexo默认的主题是`landscape`，如果不喜欢可以更换，hexo官网上�
 
 hexo的相关配置在这个文件中都可以配置，详细介绍一下
 
-~~~ plain
+~~~ text
 # Hexo Configuration
 ## Docs: https://hexo.io/docs/configuration.html
 ## Source: https://github.com/hexojs/hexo/
@@ -232,6 +233,7 @@ $ defaults write com.apple.finder AppleShowAllFiles -boolean false ; killall Fin
 $ cd 博客文件夹
 $ npm install hexo-deployer-git --save
 ~~~
+
 然后在博客的配置文件`_config.yml`（注意不是主题中的）中添加
 
 ~~~ plain
@@ -241,6 +243,7 @@ deploy:
     github: 博客的git地址
     //gitcafe: 可以像这样部署到多个git服务器上
 ~~~
+
 git地址在git主页中可以看到，注意选择ssh的地址![](http://7xqj9r.com1.z0.glb.clouddn.com/githubSSH地址.jpg)
 
 因为hexo-deployer-git插件使用ssh方式连接github，所以还要配置ssh，至于什么是ssh以及ssh的原理，可以参考我的[github的ssh key部署及原理分析] [ssh]。
@@ -292,7 +295,7 @@ $ hexo d    //相当于hexo deploy部署网页到服务器
 $ hexo g -d    //hexo generate和hexo deploy的结合
 ~~~
 
-> 至此博客已经可以使用了，不过作为自己的博客还是要好好打理一下
+ 至此博客已经可以使用了，不过作为自己的博客还是要好好打理一下
 
 ### 域名申请
 

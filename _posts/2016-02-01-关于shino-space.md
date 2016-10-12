@@ -21,7 +21,8 @@ tags:
 最后留一下联系方式吧（其实主页上就有链接）
 
 > QQ：852217956
-> 邮箱：wangzn951122@foxmail.com
+
+> 邮箱：shino@shino.space 或 shino.wzn@gmail.com
 
 
 
