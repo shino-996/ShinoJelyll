@@ -10,7 +10,7 @@ tags:
 ---
 
 最近折腾同时在[github] [github]和[gitcafe] [gitcafe]上同时部署博客并使用hexo的`hexo d -g`命令直接push博客，其中涉及到了一些ssh的命令。既然接触了就了解一下ssh的原理，没有在网上找到完整的资料，就自己总结一下。
-<!--more-->
+<!-- more -->
 
 ---
 

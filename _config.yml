@@ -26,6 +26,7 @@ paginate: 10
 permalink: /:year/:title/
 markdown: kramdown
 highlighter: rouge
+excerpt_separator: <!-- more -->
 
 kramdown:
   input: kramdown
