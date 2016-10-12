@@ -34,17 +34,8 @@ q:before, q:after {
     content: none; }
 
 table {
-    width: 100%;
     border-collapse: collapse;
     border-spacing: 0; }
-th {
-    font-weight: bold;
-}
-
-th, td {
-    text-align: center !important;
-    font-size
-}
 
 body {
     width: 100%; }
