@@ -71,3 +71,6 @@ ignore_all_file
 #### 不知道忽略哪些文件
 
 在github上的[gitignore 项目][github gitignore]中有常用的各种工程、语言及IDE的gitignore例子，按需求复制粘贴一下基本就够了，实在有特殊殊需要再自己写。
+
+[gitignore document]:https://git-scm.com/docs/gitignore
+[github gitignore]:https://github.com/github/gitignore

@@ -35,7 +35,19 @@ q:before, q:after {
 
 table {
     border-collapse: collapse;
-    border-spacing: 0; }
+    border-spacing: 0;
+    width: 100%;
+    margin-bottom: 1.3em;
+}
+
+ th, td {
+    border: 2px solid #d6dbdf;
+    padding: 8px;
+}
+
+ th {
+    background-color: rgba(102,128,153,.06);
+}
 
 body {
     width: 100%; }
@@ -992,20 +1004,6 @@ strong {
 em {
     font-style: italic; }
 
-/*blockquote {
-    margin: 1em 0;
-    padding: 2em 0;
-    background: #f8f8f8;
-    border: 1px solid #eeeeee;
-    border-radius: 3px;
-    font-family: "Roboto Slab", serif;
-    font-weight: lighter;
-    font-style: italic;
-    font-size: 1.3em;
-    text-align: center; }
-    blockquote p:last-child {
-        margin-bottom: 0; }
-*/
 blockquote {
     background: rgba(102,128,153,.06);
     border-left: 5px solid #d6dbdf;
@@ -1031,6 +1029,10 @@ ol {
 
 ul {
     list-style-type: disc; }
+
+li p {
+    margin-bottom: 0;
+}
 
 code {
     padding: .1em .4em;

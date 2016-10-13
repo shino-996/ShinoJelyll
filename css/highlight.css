@@ -1,6 +1,12 @@
-.highlight table td { padding: 5px; }
-.highlight table pre { margin: 0;
- }
+.highlight table td {
+  padding: 5px;
+}
+.highlight table pre {
+  margin: 0;
+}
+.highlight table {
+  margin-bottom: 0;
+}
 .highlight, .highlight .w {
   color: #2c3e50;
   background-color: rgba(102, 128, 153, 0.1);
@@ -8,6 +14,10 @@
 }
 td.gutter.gl {
   background-color: #d6dbdf;
+  border: 0;
+}
+td.code {
+  border: 0;
 }
 pre.lineno {
   width: 50%;
