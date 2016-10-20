@@ -935,7 +935,6 @@ html {
     max-height: 100%; }
 
 body {
-    /*font-family: "Raleway", sans-serif;*/
     font-family: PingFang SC, Hiragino Sans GB, Microsoft Yahei, WenQuanYi Micro Hei, sans-serif;
     font-size: 1em;
     color: #2c3e50;
@@ -966,7 +965,6 @@ h5,
 h5 {
     margin-top: .8em;
     margin-bottom: .4em;
-    /*font-family: "Roboto Slab", serif;*/
     font-family: PingFang SC, Hiragino Sans GB, Microsoft Yahei, WenQuanYi Micro Hei, sans-serif;
     font-weight: normal;
     color: #2c3e50;
@@ -1379,7 +1377,6 @@ nav {
 
 .navigation {
     display: inline-block;
-    float: left;
     position: relative;
     margin: 0;
     list-style-type: none; }
