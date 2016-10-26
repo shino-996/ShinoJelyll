@@ -56,6 +56,7 @@ body {
     body:after {
         clear: both; }
 
+
 /*
  * Foundation Icons v 3.0
  * Made by ZURB 2013 http://zurb.com/playground/foundation-icon-fonts-3
@@ -1221,7 +1222,7 @@ hr {
     width: 100%;
     max-width: none;
     height: 100%;
-    background: url(../images/background-cover.jpg) top left no-repeat #666666;
+    background: url(../images/background-cover.jpg) bottom left no-repeat #666666;
     background-size: cover; }
 
 .panel-cover--collapsed {
@@ -1404,6 +1405,28 @@ nav {
         .navigation--social a .icon {
             display: block;
             font-size: 1.7em; }
+
+.pixiv-title {
+    position: absolute;
+    right: 20px;
+    bottom: 40px;
+    font-weight: normal;
+    opacity: .8;
+}
+    .pixiv-title:hover {
+        opacity: 1;
+    }
+
+.pixiv-author {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    font-weight: normal;
+    opacity: .8;
+}
+    .pixiv-author:hover {
+        opacity: 1;
+    }
 
 .pagination {
     display: block;
