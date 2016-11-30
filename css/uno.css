@@ -973,7 +973,7 @@ h5 {
 
 h1 {
     margin-top: 0;
-    font-size: 3.2em;
+    font-size: 2.8em;
     line-height: 1.2em;
     letter-spacing: .05em; }
 
@@ -1411,7 +1411,7 @@ nav {
     right: 20px;
     bottom: 40px;
     font-weight: normal;
-    opacity: .8;
+    opacity: .6;
 }
     .pixiv-title:hover {
         opacity: 1;
@@ -1422,7 +1422,7 @@ nav {
     right: 20px;
     bottom: 20px;
     font-weight: normal;
-    opacity: .8;
+    opacity: .6;
 }
     .pixiv-author:hover {
         opacity: 1;

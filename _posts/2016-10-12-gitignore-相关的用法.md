@@ -1,6 +1,6 @@
 ---
 title: gitignore 相关的用法
-date: 2016-03-24 18:08:16
+date: 2016-10-12 18:08:16
 tags:
 - 计算机
 - git
@@ -22,7 +22,7 @@ $ git --help gitignore
 
 > gitignore 的说明及基本使用参照[git官方的说明][gitignore document]或者google，不多说这个了。
 
-#### 忽略文件&目录
+### 忽略文件&目录
 
 gitignore文件本质就是一个忽略列表，想要被忽略的文件或目录直接写在里面就行了
 
@@ -54,7 +54,7 @@ ignore_all_file
 **／file_B
 ~~~
 
-#### 强行不忽略某个文件
+### 强行不忽略某个文件
 
 可以无视定义的忽略文件规则，不忽略某些文件。但是无法将已经被忽略的目录中的文件重新加入，因为目录被忽略后，git就不管这个目录了...
 
@@ -68,7 +68,7 @@ ignore_all_file
 # !/except_this
 ~~~
 
-#### 不知道忽略哪些文件
+### 不知道忽略哪些文件
 
 在github上的[gitignore 项目][github gitignore]中有常用的各种工程、语言及IDE的gitignore例子，按需求复制粘贴一下基本就够了，实在有特殊殊需要再自己写。
 

@@ -236,7 +236,7 @@ $ npm install hexo-deployer-git --save
 
 然后在博客的配置文件`_config.yml`（注意不是主题中的）中添加
 
-~~~ plain
+~~~ yml
 deploy:
   type: git
   repo:
@@ -325,7 +325,7 @@ $ npm install hexo-generator-sitemap --save
 
 同时hexo配置文件`_config.yml`也要进行修改，添加
 
-~~~ plain
+~~~ yml
 sitemap:
  path: sitemap.xml
 ~~~
