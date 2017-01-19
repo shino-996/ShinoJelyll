@@ -943,10 +943,10 @@ body {
     -webkit-font-smoothing: antialiased; }
 
 ::selection {
-    background: #e25440; }
+    background: #d6dbdf; }
 
 ::-moz-selection {
-    background: #e25540; }
+    background: #d6dbdf; }
 
 a {
     text-decoration: none;
@@ -1035,7 +1035,7 @@ li p {
 code {
     padding: .1em .4em;
     background-color: rgba(102,128,153,.06);
-    border: 1px solid #c9e1f6;
+    border: 1px solid #d6dbdf;
     border-radius: 3px;
     font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
     font-size: .85em; }
