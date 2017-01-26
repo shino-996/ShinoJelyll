@@ -13,12 +13,15 @@ tags:
 
 ---
 
+{:.no_toc}
+## 目录
+
 * 目录
 {:toc}
 
 > 长文提示，可以点击屏幕右下角的![](http://7xqj9r.com1.z0.glb.clouddn.com/catalogue.jpg)按钮按照章节阅读
 
-### hexo&github
+## hexo&github
 
 正如文章标题，这个博客托管在`github`上，通过`hexo`框架搭建。github不用多说，github提供的`github pages`项目使得可以将静态网页托管在github上提供网站服务。至于hexo，直接引用它的作者`tommy351`的话：
 
@@ -26,23 +29,23 @@ tags:
 
 一个快速、简洁、强大的静态博客框架。
 
-### 为什么这么选择
+## 为什么这么选择
 
 很简单，托管在github上就不用自己去买vps，vps要花钱的←_←
 
 hexo使用起来也很简单，配置好之后三个命令就足以应付日常写博客了。现成的博客框架也不用多操心网站的搭建，图方便十几分钟就能搞定；如果喜欢折腾，那么完全可以自己在框架上进行修改，玩几个月都不是问题。
 
-### 配置环境
+## 配置环境
 
 > 以下操作为`OS X 11.3`系统下进行的，不过不同系统间的差异性应该不大。
 
 无论是否已经搭建成功，都推荐看一看[官方文档] [hexo public doc]，官方文档一定是最好的学习资料。
 
-### 安装node.js&git
+## 安装node.js&git
 
 OS X自带`git`，不用管，`node.js`建议从[node.js官网] [node js]下载安装器，连`npm`也安装了，省了不少事。
 
-### 安装hexo
+## 安装hexo
 
 之后打开终端，使用npm安装hexo，需要root权限进行某些文件的写入
 
@@ -50,7 +53,7 @@ OS X自带`git`，不用管，`node.js`建议从[node.js官网] [node js]下载�
 $ sudo npm install hexo-cli -g
 ~~~
 
-### 建立博客文件夹
+## 建立博客文件夹
 
 和博客有关的资源需要放在一个文件夹中，新建一个文件夹后在终端进入该文件夹的目录中进行hexo及npm的初始化
 
@@ -71,7 +74,7 @@ $ npm install
 └── themes     //主题
 ~~~
 
-### 试着运行
+## 试着运行
 
 ~~~ sh
 $ hexo server
@@ -101,7 +104,7 @@ $ npm install hexo --no-optional
 ~~~
 之后需要重新初始化文件夹，就没有报错了。不过dtrace基本用不上，不管报错继续用也不会有什么问题。
 
-### 新建文章
+## 新建文章
 
 ~~~ sh
 hexo new '文章名称'
@@ -127,11 +130,11 @@ tags:
 - tag3
 ~~~
 
-### 主题更换
+## 主题更换
 
 hexo默认的主题是`landscape`，如果不喜欢可以更换，hexo官网上就有不少漂亮的主题，如果还不满意可以自己修改甚至从头做起。下载好的主题放在`themes`文件夹中，之后在hexo的配置文件`_config.yml`中将`theme`后的名称改成想更改的主题名称即可。主题的配置因主题而异，在主题中同样有一个`_config.yml`文件，是配置主题设置的，不要与hexo的配置文件弄混。
 
-### _config.yml配置文件
+## _config.yml配置文件
 
 hexo的相关配置在这个文件中都可以配置，详细介绍一下
 
@@ -210,7 +213,7 @@ deploy:
 
 ~~~
 
-### 生成网站文件
+## 生成网站文件
 
 ~~~ sh
 $ hexo generate
@@ -218,7 +221,7 @@ $ hexo generate
 
 之后会生成一个`public`文件夹，文件夹中的文件即为生成的网页文件。
 
-### 将博客部署到github
+## 将博客部署到github
 
 按照[github pages] [github pages]的说明配置，申请一个github帐号，之后新建项目，注意项目名称为`用户名.github.io`否则之后是无法访问的，一个账户只能建一个github pages。之后将之前的**public**文件夹里的内容都同步到这个项目的**master**分支，之后浏览器访问`用户名.github.io`就能看到hexo的博客界面了。
 
@@ -290,7 +293,7 @@ $ ssh -T git@github.com
 
 现在就可以使用hexo-deployer-git插件了，方法很简单，`hexo generate`之后，再使用`hexo deploy`就可以自动部署了。
 
-### hexo短命令
+## hexo短命令
 
 hexo支持短命令，使用起来不用输入太长的指令，只列出常用的：
 
@@ -303,7 +306,7 @@ $ hexo g -d    //hexo generate和hexo deploy的结合
 
  至此博客已经可以使用了，不过作为自己的博客还是要好好打理一下
 
-### 域名申请
+## 域名申请
 
 github会为建成的github pages提供一个`用户名.github.io`的二级域名，不过如果想提升逼格（就像我这样的←_←）的可以绑定自己的域名。因为我朝**严格的审查制度**，国内注册的域名，或者是提供web服务的服务器需要进行备份，备份很麻烦，而且总感觉自己的域名备份后就像是上交国家了一样，所以就别在国内申请域名了。我是在[godaddy] [godaddy]上申请的域名，有中文网页，还支持支付宝，促销活动也挺多。
 
@@ -311,7 +314,7 @@ github会为建成的github pages提供一个`用户名.github.io`的二级域�
 
 之后要让github接受这个域名解析到自己，在根目录下添加一个名为`CNAME`的文件，内容为我们自己的域名。因为hexo每次`generate`之后会删除掉非`generate`命令生成的文件，CNAME文件不能直接放在public目录下。可以把CNAME文件添加到主题文件夹中的`source`文件夹，每次generate都会把source文件夹的内容拷贝到public文件夹。其他想放在public目录但每次generate会删除的文件也可以放进去。
 
-### 网站分析
+## 网站分析
 
 用于分析网站流量，我使用的是`Google Analytics`。
 
@@ -319,7 +322,7 @@ github会为建成的github pages提供一个`用户名.github.io`的二级域�
 
 这样就可以清楚的了解到网站的访问信息了。虽然在国内Google的分析代码可以运行，不过Google分析的管理网站在被~~**~~了，所以需要翻墙才能看到分析结果。觉得麻烦可以换用过国内的[百度统计] [baidu analytics]或者[站长统计] [zhanzhang analytics]。![](http://7xqj9r.com1.z0.glb.clouddn.com/Google%20Analytics.jpg)
 
-### 搜索引擎
+## 搜索引擎
 
 为了增加网站的曝光率，可以向搜索引擎提供`sitemap`，主动让网站出现在搜索引擎的搜索结果中。关于`sitemap`，可以看看[Google的介绍] [google sitemap]。
 
@@ -338,11 +341,11 @@ sitemap:
 
 `sitemap`换成其他名字也可以。。。这样再次generate在网站根目录就会生成`sitemap.xml`文件，然后到[Google console] [google console]登录，添加属性，也就是要提交sitemap的网站，验证。使用HTML文件验证即可，添加到网站目录，push到github上就可以了。同`CNAME`文件一样，每次generate会删除验证文件，添加到`source`文件夹即可。之后就是等待Google的爬虫根据站点地图的URL光临博客，建立索引，之后就可以在Google上搜索到我们的博客了。
 
-### 评论功能
+## 评论功能
 
 主题里肯定都会添加评论功能的接口，国内访问该是用[多说][duoshuo]吧，不同的主题配置方法也有出入，没法详细介绍。
 
-### markdown编辑软件
+## markdown编辑软件
 
 写文章才是搭建博客的目的，hexo中使用markdown格式书写文章，markdown是什么以及markdown语法，[找篇文章] [markdown]看看就好，上手挺容易的，不过工具的确纠结了一阵子，开源免费的都用过了一遍，随后还是投奔了**sublime text**（别问我花没花钱买），预览问题可以通过安装`OmniMarkupPreviewer`插件解决，用到最后才发现，实时预览只会分散注意力，过分关注实际的渲染效果，没法把精力集中在写作本身了。并且sublime text页用习惯了，干什么都用一个工具也方便。OmniMarkupPreviewer的配置以及sublime text的使用可以参考[这篇文章] [sublime markdown]。
 
