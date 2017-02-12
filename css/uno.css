@@ -36,12 +36,12 @@ table {
     margin-bottom: 1.3em;
 }
 
- th, td {
+th, td {
     border: 2px solid #d6dbdf;
     padding: 8px;
 }
 
- th {
+th {
     background-color: rgba(102,128,153,.06);
 }
     
@@ -131,18 +131,23 @@ blockquote {
         margin-bottom: 0; }
     
 ol, ul {
-    margin: 0 0 1.3em 2.5em; }
+    margin: 0 0 1.3em 2.5em;
+}
     ol li, ul li {
         margin: 0 0 .2em 0;
-        line-height: 1.6em; }
+        line-height: 1.6em;
+    }
     ol ol, ol ul, ul ol, ul ul {
-        margin: .1em 0 .2em 2em; }
+        margin: .1em 0 .2em 2em;
+    }
 
 ol {
-    list-style-type: decimal; }
+    list-style-type: decimal;
+}
 
 ul {
-    list-style-type: disc; }
+    list-style-type: disc;
+}
 
 li p {
     margin-bottom: 0;
@@ -154,7 +159,8 @@ code {
     border: 1px solid #d6dbdf;
     border-radius: 3px;
     font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
-    font-size: .85em; }
+    font-size: .85em;
+    }
 
 pre {
     margin-bottom: 1.3em;
@@ -163,11 +169,12 @@ pre {
     font-size: .9em;
     font-weight: normal;
     line-height: 1.3em;
-     }
+    }
     pre code {
         padding: 0;
         background: none;
-        border: none; }
+        border: none;
+    }
 
 .date,
 .time,

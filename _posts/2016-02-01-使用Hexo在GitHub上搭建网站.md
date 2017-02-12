@@ -278,7 +278,7 @@ $ ssh-keygen -C 注册github所用的邮箱
 - 之后读取生成密钥的公钥
 
 ~~~ sh
-$ car ~/id_rsa.pub
+$ cat ~/id_rsa.pub
 ~~~
 
 把显示出来的内容复制下来，然后到github的网页上，进入到设置界面，找到ssh key，新建一个key，那刚才的内容粘贴进去。![](http://7xqj9r.com1.z0.glb.clouddn.com/githubSSH公钥添加.jpg)
