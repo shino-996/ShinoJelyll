@@ -19,8 +19,6 @@ tags:
 * 目录
 {:toc}
 
-> 长文提示，可以点击屏幕右下角的![](http://7xqj9r.com1.z0.glb.clouddn.com/catalogue.jpg)按钮按照章节阅读
-
 ## hexo&github
 
 正如文章标题，这个博客托管在`github`上，通过`hexo`框架搭建。github不用多说，github提供的`github pages`项目使得可以将静态网页托管在github上提供网站服务。至于hexo，直接引用它的作者`tommy351`的话：
@@ -80,7 +78,7 @@ $ npm install
 $ hexo server
 ~~~
 
-用浏览器打开`http://0.0.0.0:4000/`，打开的网页就是hexo所生成的，因为我们还没有进行任何修改，所以打开的是hexo默认的`hello world`![](http://7xqj9r.com1.z0.glb.clouddn.com/hexo-hello%20world.jpg)
+用浏览器打开`http://0.0.0.0:4000/`，打开的网页就是hexo所生成的，因为我们还没有进行任何修改，所以打开的是hexo默认的`hello world`![](https://olytnha18.qnssl.com/hexo-hello%20world.jpg)
 
 hexo编译的时候会出现这样的报错：
 
@@ -253,7 +251,7 @@ deploy:
     //gitcafe: 可以像这样部署到多个git服务器上
 ~~~
 
-git地址在git主页中可以看到，注意选择ssh的地址![](http://7xqj9r.com1.z0.glb.clouddn.com/githubSSH地址.jpg)
+git地址在git主页中可以看到，注意选择ssh的地址![](https://olytnha18.qnssl.com/githubSSH地址.jpg)
 
 因为hexo-deployer-git插件使用ssh方式连接github，所以还要配置ssh，至于什么是ssh以及ssh的原理，可以参考我的[github的ssh key部署及原理分析] [ssh]。
 
@@ -281,7 +279,7 @@ $ ssh-keygen -C 注册github所用的邮箱
 $ cat ~/id_rsa.pub
 ~~~
 
-把显示出来的内容复制下来，然后到github的网页上，进入到设置界面，找到ssh key，新建一个key，那刚才的内容粘贴进去。![](http://7xqj9r.com1.z0.glb.clouddn.com/githubSSH公钥添加.jpg)
+把显示出来的内容复制下来，然后到github的网页上，进入到设置界面，找到ssh key，新建一个key，那刚才的内容粘贴进去。![](https://olytnha18.qnssl.com/githubSSH公钥添加.jpg)
 
 - 添加之后测试一下
 
@@ -310,7 +308,7 @@ $ hexo g -d    //hexo generate和hexo deploy的结合
 
 github会为建成的github pages提供一个`用户名.github.io`的二级域名，不过如果想提升逼格（就像我这样的←_←）的可以绑定自己的域名。因为我朝**严格的审查制度**，国内注册的域名，或者是提供web服务的服务器需要进行备份，备份很麻烦，而且总感觉自己的域名备份后就像是上交国家了一样，所以就别在国内申请域名了。我是在[godaddy] [godaddy]上申请的域名，有中文网页，还支持支付宝，促销活动也挺多。
 
-为了保证域名在国内的解析速度，可以使用国内的DNS解析服务，推荐[DNSPod] [dnspod]的DNS解析，速度快，而且免费的功能也完全足够用。需要到域名注册商更换DNS服务器，更换后需要过一段时间才会生效。之后到dnspod的页面添加DNS记录，添加`cname`记录，记录值即为github pages给我们的二级域名![](http://7xqj9r.com1.z0.glb.clouddn.com/dnspod解析.jpg)
+为了保证域名在国内的解析速度，可以使用国内的DNS解析服务，推荐[DNSPod] [dnspod]的DNS解析，速度快，而且免费的功能也完全足够用。需要到域名注册商更换DNS服务器，更换后需要过一段时间才会生效。之后到dnspod的页面添加DNS记录，添加`cname`记录，记录值即为github pages给我们的二级域名![](https://olytnha18.qnssl.com/dnspod解析.jpg)
 
 之后要让github接受这个域名解析到自己，在根目录下添加一个名为`CNAME`的文件，内容为我们自己的域名。因为hexo每次`generate`之后会删除掉非`generate`命令生成的文件，CNAME文件不能直接放在public目录下。可以把CNAME文件添加到主题文件夹中的`source`文件夹，每次generate都会把source文件夹的内容拷贝到public文件夹。其他想放在public目录但每次generate会删除的文件也可以放进去。
 
@@ -320,7 +318,7 @@ github会为建成的github pages提供一个`用户名.github.io`的二级域�
 
 首先进入[Google Analytics] [google analytics]，没有Google帐号就注册一个。之后添加自己的域名并认证，添加跟踪代码。跟踪代码的添加与模板有关，基本上模板都会提供相应的接口，模板的文档上应该会有所介绍。
 
-这样就可以清楚的了解到网站的访问信息了。虽然在国内Google的分析代码可以运行，不过Google分析的管理网站在被~~**~~了，所以需要翻墙才能看到分析结果。觉得麻烦可以换用过国内的[百度统计] [baidu analytics]或者[站长统计] [zhanzhang analytics]。![](http://7xqj9r.com1.z0.glb.clouddn.com/Google%20Analytics.jpg)
+这样就可以清楚的了解到网站的访问信息了。虽然在国内Google的分析代码可以运行，不过Google分析的管理网站在被~~**~~了，所以需要翻墙才能看到分析结果。觉得麻烦可以换用过国内的[百度统计] [baidu analytics]或者[站长统计] [zhanzhang analytics]。![](https://olytnha18.qnssl.com/Google%20Analytics.jpg)
 
 ## 搜索引擎
 
