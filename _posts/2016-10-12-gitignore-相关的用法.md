@@ -1,6 +1,6 @@
 ---
 title: gitignore 相关的用法
-date: 2016-10-12 18:08:16
+date: 2016-10-12 18:08:16 +0800
 tags:
 - 计算机
 - git
@@ -21,7 +21,6 @@ $ git --help gitignore
 
 * 目录
 {:toc}
-
 
 。。。。。。
 
@@ -78,6 +77,14 @@ ignore_all_file
 ## 不知道忽略哪些文件
 
 在github上的[gitignore 项目][github gitignore]中有常用的各种工程、语言及IDE的gitignore例子，按需求复制粘贴一下基本就够了，实在有特殊殊需要再自己写。
+
+## 添加后的gitignore文件不生效
+
+如果之前忘记添加gitignore文件或者gitignore文件没有包含某个文件，因为想要让git忽略的文件已经在git缓存区中，所以需要删除git缓存区的文件才能让新添加上gitignore文件生效：
+
+~~~ sh
+$ git rm -r --cached .
+~~~
 
 [gitignore document]:https://git-scm.com/docs/gitignore
 [github gitignore]:https://github.com/github/gitignore

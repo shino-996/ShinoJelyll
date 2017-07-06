@@ -12,6 +12,11 @@ author:
   github_username: shino-996
   qq: 852217956
 
+pixiv:
+  id: 38091934
+  name: 夏 (Refrain)
+  author: kein
+
 defaults:
   -
     scope:
@@ -40,4 +45,4 @@ kramdown:
       start_line: 1
 
 gems: ['jekyll-paginate']
-exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'screenshot.png']
+exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'deploy.sh', "newpost.sh"]
