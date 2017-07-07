@@ -10,3 +10,6 @@ git commit -m "${commit_time}"
 git push -f jekyll master
 cd ../
 rm -rf _site
+git add .
+git commit -m "$1"
+git push
