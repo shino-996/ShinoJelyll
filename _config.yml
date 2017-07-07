@@ -45,4 +45,4 @@ kramdown:
       start_line: 1
 
 gems: ['jekyll-paginate']
-exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'deploy.sh', "newpost.sh"]
+exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'deploy.sh', "newpost.sh", "urls.txt"]

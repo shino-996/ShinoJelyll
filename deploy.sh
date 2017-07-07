@@ -13,3 +13,4 @@ rm -rf _site
 git add .
 git commit -m "$1"
 git push github master:master
+curl -H 'Content-Type:text/plain' --data-binary @urls.txt "http://data.zz.baidu.com/urls?site=https://shino.space&token=WuSqU4rdbH2n2FIX"
