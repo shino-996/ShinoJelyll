@@ -7,9 +7,9 @@ git remote add jekyll root@shino.space:jekyll.git
 git add .
 commit_time=$(date "+%Y-%m-%d %H:%M:%S")
 git commit -m "${commit_time}"
-git push -f jekyll master
+git push -f jekyll master:master
 cd ../
 rm -rf _site
 git add .
 git commit -m "$1"
-git push github
+git push github master:master

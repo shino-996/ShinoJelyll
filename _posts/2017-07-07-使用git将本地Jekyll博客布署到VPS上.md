@@ -84,14 +84,14 @@ git remote add jekyll root@shino.space:jekyll.git
 git add .
 commit_time=$(date "+%Y-%m-%d %H:%M:%S")
 git commit -m "${commit_time}"
-git push -f jekyll master
+git push -f jekyll master:master
 # 删除本地网页文件夹
 cd ../
 rm -rf _site
 # 将Jekyll工程文件提交到GitHub
 git add .
 git commit -m "$1"
-git push github
+git push github master:master
 ~~~
 
 VPS上的裸仓库的地址格式为`用户名@VPS地址:目录`，这里的目录为用户目录而不是根目录（别吐槽我用root干这事）。第一次提交到仓库时，因为仓库上没有任何分支，可以在第一次push时执行`git push --set-upstream master`在建立一个master分支，之后再push就按脚本里的来就可以了。
