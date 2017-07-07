@@ -91,12 +91,12 @@ rm -rf _site
 # 将Jekyll工程文件提交到GitHub
 git add .
 git commit -m "$1"
-git push
+git push github
 ~~~
 
 VPS上的裸仓库的地址格式为`用户名@VPS地址:目录`，这里的目录为用户目录而不是根目录（别吐槽我用root干这事）。第一次提交到仓库时，因为仓库上没有任何分支，可以在第一次push时执行`git push --set-upstream master`在建立一个master分支，之后再push就按脚本里的来就可以了。
 
-在push到VPS的仓库时，因为每次都是在新生成的网页文件夹中新建的git，所以直接将本地git推送到VPS上的git会报错，所以要用`-f`参数强制push。
+在push到VPS的仓库时，因为每次都是在新生成的网页文件夹中新建的git，所以直接将本地git推送到VPS上的git会报错，所以要用`-f`参数强制push。`git push`后面要加远程仓库的名字，在脚本中VPS上仓库名字用的是`jekyll`，github上仓库的名字我用的是`github`，要对照着进行修改。
 
 至于最后push 到GitHub上的语句中的`$1`，工程文件的commit总得定点有意义的东西吧，就做为参数了。
 
