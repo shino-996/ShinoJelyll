@@ -322,7 +322,7 @@ hr {
     margin: 0 0 5px 0;
     font-size: 2.5em;
     letter-spacing: 4px;
-    color: #FFF; }
+    color: rgba(0, 0, 0, 0.43) }
 
 .panel-subtitle {
     font-family: "Roboto Slab", serif;
@@ -339,12 +339,13 @@ hr {
     width: 100%;
     max-width: none;
     height: 100%;
-    background: url(../images/background-cover.jpg) bottom left no-repeat #666666;
+    background: url(../images/background-cover.jpg) top left no-repeat #666666;
     background-size: cover; }
 
 .panel-cover--collapsed {
     width: 30%;
-    max-width: 530px; }
+    max-width: 530px;
+    background-position-x: 20%; }
 
 .panel-cover--overlay {
     display: block;
@@ -399,10 +400,9 @@ hr {
 .panel-inverted {
     font-weight: 100;
     text-align: center;
-    color: #FFF;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4); }
+    color: rgba(0, 0, 0, 0.5); }
     .panel-inverted a {
-        color: #FFF; }
+        rgba(0, 0, 0, 0.73) }
 
 .cover-navigation {
     margin-top: 10px; }
@@ -478,7 +478,7 @@ hr {
     left: 0;
     width: 100%;
     height: 42px;
-    background: rgba(0, 0, 0, 0.40);
+    background: rgb(234, 213, 213);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     text-align: center; }
 
@@ -506,12 +506,12 @@ nav {
     .navigation__item a {
         display: block;
         position: relative;
-        border-color: #FFF;
-        color: #FFF;
+        border-color: rgba(0, 0, 0, 0.58);
+        color: rgba(0, 0, 0, 0.73);
         opacity: .8; }
         .navigation__item a:hover {
-            color: #FFF;
-            border-color: #FFF;
+            color: #000;
+            border-color: #000;
             opacity: 1; }
 
 .navigation--social { }
@@ -529,9 +529,11 @@ nav {
     bottom: 40px;
     font-weight: normal;
     opacity: .6;
+    color: rgba(0, 0, 0, 0.73);
 }
     .pixiv-title:hover {
         opacity: 1;
+        color: #000;
     }
 
 .pixiv-author {
@@ -540,9 +542,11 @@ nav {
     bottom: 20px;
     font-weight: normal;
     opacity: .6;
+    color: rgba(0, 0, 0, 0.73);
 }
     .pixiv-author:hover {
         opacity: 1;
+        color: #000;
     }
 
 .pagination {
@@ -747,7 +751,7 @@ input[type="tel"] {
     .panel-cover {
         width: 100%;
         height: 100%;
-        background-position: center center; }
+        background-position-x: 18%; }
         .panel-cover.panel-cover--collapsed {
             display: block;
             position: relative;
@@ -774,7 +778,7 @@ input[type="tel"] {
         left: 0;
         width: 100%;
         padding: 20px 0;
-        background: rgba(51, 51, 51, 0.98);
+        background: rgba(234, 213, 213, 0.43);
         border-bottom: 1px solid rgba(255, 255, 255, 0.15); }
         .navigation-wrapper.visible {
             display: block; }

@@ -20,7 +20,7 @@ $(document).ready(function () {
       $('.content-wrapper').addClass('animated fadeInDown')
     } else {
       $('.panel-cover').css('max-width', currentWidth)
-      $('.panel-cover').animate({'max-width': '530px', 'width': '30%'}, 400, swing = 'swing', function () {})
+      $('.panel-cover').animate({'max-width': '530px', 'width': '30%', 'background-position-x': '20%'}, 400, swing = 'swing', function () {})
     }
   })
 
