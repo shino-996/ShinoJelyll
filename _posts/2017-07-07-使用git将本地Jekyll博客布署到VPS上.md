@@ -23,7 +23,7 @@ tags:
 
 # 思路
 
-![](/sources/2017-07-07-使用git将本地Jekyll博客布署到VPS上-mind.jpg)
+![](/source/2017-07-07-使用git将本地Jekyll博客布署到VPS上-mind.jpg)
 
 本地装有Jekyll用来折腾博客，生成网页文件。生成的网页文件发到VPS上，而博客的工程文件传到GitHub上存档。
 
