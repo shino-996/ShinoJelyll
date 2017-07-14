@@ -13,4 +13,4 @@ cd ../
 rm -rf _site
 git add .
 git commit -m "$1"
-git push github master:master
+git push origin master:master
