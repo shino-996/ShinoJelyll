@@ -555,8 +555,11 @@ nav {
 
 .pagination__page-number {
     margin: 0;
-    font-size: .8em;
-    color: #999999; }
+    font-size: 1em;
+    color: #999999;
+    display: inline-block;
+      padding: 10px;
+}
 
 .pagination__newer {
     margin-right: 1em; }
@@ -575,6 +578,10 @@ i {
     font-size: 22px;
     display: block;
     position: relative; }
+
+.posts.older.btn.small {
+    text-align: center;
+}
 
 .post-list {
     margin: 0;
