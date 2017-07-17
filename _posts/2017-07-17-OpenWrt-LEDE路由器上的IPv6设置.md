@@ -44,11 +44,14 @@ NAT（网络地址转换）本身是为了解决IPv4地址不够的技术，IPv6
 ### LAN口配置
 
 默认也应该是设置好的，`LAN`接口会有一个本地链路IPv6地址，相当于IPv4的内网地址。这个地址是根据接口总界面下`IPv6 ULA前缀`生成的，要中以通过修改前缀来改变路由LAN口IP。
+
+![](/source/2017-07-17-OpenWrt/LEDE路由器上的IPv6设置-接口.jpg)
+
 ### DHCP配置
 
 默认这个也都是已经配置好了的。在LAN口的DHCP配置的IPv6配置中，`路由器广告模式`和`DHCPv6服务`均选择`服务器模式`，并勾选`即使没有可用的公共前缀也广播默认路由`。至于`DHCPv6模式`，选哪个都行……`有状态`类似于IPv4的DHCP，`无状态`是IPv6特有的，不多提。
 
-![](/source/2017-07-17-OpenWrt/LEDE路由器上的IPv6设置-NAT.png)
+![](/source/2017-07-17-OpenWrt/LEDE路由器上的IPv6设置-NAT.jpg)
 
 ### 防火墙设置
 
@@ -89,7 +92,7 @@ lede$ chmod +x 90-ipv6
 
 WAN口配置不变，LAN口把`IPv6 ULA前缀`去掉，也不要添加LAN口IPv6地址，在DHCP配置中，把`路由器广告服务`、`DHCPv6服务`、`NDP-代理`都改为`中继模式`。
 
-![](/source/2017-07-17-OpenWrt/LEDE路由器上的IPv6设置-中继.png)
+![](/source/2017-07-17-OpenWrt/LEDE路由器上的IPv6设置-中继.jpg)
 
 之后再编辑路由器的`/etc/config/dhcp`文件，在`config dhcp 'lan'`字段下添加`option master 1`：
 
@@ -106,3 +109,5 @@ config dhcp 'lan'
 ~~~
 
 NAT中提到的防火墙和网关都不用设置，这样就搞定了，每个设备都会分得一个全球单播地址。
+
+[rfc]: https://tools.ietf.org/html/rfc6204
