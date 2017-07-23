@@ -1,51 +1,69 @@
-@import url(uno.css);
+@import url(shino.css);
 @import url(highlight.css);
 
-/* Modifications */
+/*
+背景图信息文字颜色
+*/
+.pixiv-title {
+    color: rgba(0, 0, 0, 0.73);
+}
+    .pixiv-title:hover {
+        color: #000;
+    }
 
-pre.highlight,
-.highlight pre {
-  padding: 10px;
+.pixiv-author {
+    color: rgba(0, 0, 0, 0.73);
+}
+    .pixiv-author:hover {
+        color: #000;
+    }
+
+
+/*
+背景图位置（通用）
+*/
+.panel-cover {
+    background-position: top left;
 }
 
-pre.highlight code,
-.highlight pre code {
-  white-space: pre-wrap;
+.panel-cover--collapsed {
+    background-position-x: 20%;
 }
 
-.btn, 
+/*
+手机视图
+*/
+@media all and (max-width: 960px) {
+/*
+背景图位置
+*/
+    .panel-cover {
+        background-position-x: 18%;
+    }
+
+/*
+下拉菜单颜色
+*/
+    .navigation-wrapper {
+    background: rgba(234, 213, 213, 0.43);
+    }
+}
+
+/*
+手机视图下菜单按扭颜色
+*/
+.btn-mobile-menu {
+    background: rgb(234, 213, 213);
+}
+
+/*
+导航按扭颜色
+*/
 .navigation__item a {
-  margin: 5px 0;
-  white-space: nowrap;
+    border-color: rgba(0, 0, 0, 0.58);
+    color: rgba(0, 0, 0, 0.73);
 }
-
-.categories a,
-.tags a {
-  border: 1px solid #e25440;
-  border-radius: 20px;
-  color: #e25440;
-  display: inline-block;
-  font-size: 12px;
-  margin: 5px 0;
-  padding: 5px 10px;
-  text-shadow: none;
-  white-space: nowrap;
-}
-
-.post-meta__tags {
-  font-size: 1em;
-}
-
-.footer__copyright {
-    margin: 0 20px 10px;
-}
-
-.user-image {
-  margin-bottom: 1.2em;
-  position: relative;
-  width: 100px;
-  height: 100px;
-  border: 3px solid rgba(255, 255, 255, 0.8);
-  border-radius:100%;
-  opacity: 0.8;
-}
+    .navigation__item a:hover {
+        color: #000;
+            border-color: #000;
+    }
