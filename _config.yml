@@ -8,9 +8,9 @@ google_analytics: 'UA-78168136-1'
 author:
   name: 'shino'
   email: shino@shino.space
-  twitter_username: shino_996
+  # twitter_username: shino_996
   github_username: shino-996
-  qq: 852217956
+  # qq: 852217956
 
 pixiv:
   id: 62258773
