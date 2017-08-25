@@ -31,10 +31,6 @@
             <ul class="navigation">
               <li class="navigation__item"><a href="{{ site.baseurl }}tags/" class="blog-button">归档</a></li>
             </ul>
-
-            <ul class="navigation">
-              <li class="navigation__item"><a href="{{ site.baseurl }}feed.xml" class="blog-button">订阅</a></li>
-            </ul>
           </nav>
 
           <div>
@@ -74,12 +70,19 @@
             {% if site.author.email %}
               <!-- Email -->
               <li class="navigation__item">
-                <a href="mailto:{{ site.author.email }}" title="Email {{ site.author.email }}" target="_blank">
+                <a href="mailto:{{ site.author.email }}" title="邮箱 {{ site.author.email }}" target="_blank">
                   <i class="icon icon-mail"></i>
                   <span class="label">Email</span>
                 </a>
               </li>
             {% endif %}
+              <!-- RSS -->
+              <li class="navigation__item">
+                <a href="{{ site.baseurl }}feed.xml" title="RSS订阅" target="_blank">
+                  <i class="icon icon-RSS"></i>
+                  <span class="label">RSS</span>
+                </a>
+              </li>
             </ul>
           </nav>
           </div>

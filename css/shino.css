@@ -1010,6 +1010,9 @@ div.highlighter-rouge {
 .icon-social-twitter:before {
     content: "\f1e4";
 }
+.icon-RSS:before {
+    content: "\f1aa";
+}
 .icon-x-circle:before {
     content: "\f216";
 }
