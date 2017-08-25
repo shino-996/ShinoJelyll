@@ -27,7 +27,7 @@ tags:
 ~~~ swift
 //直接扩展一下String，使用能方便些
 extension String {
-    func init?(gbkData: Data) {
+    init?(gbkData: Data) {
         //获取GBK编码，使用GB18030是因为它向下兼容GBK
         let cfEncoding = CFStringEncodings.GB_18030_2000
         let encoding = CFStringConvertEncodingToNSStringEncoding(CFStringEncoding(cfEncoding.rawValue))
