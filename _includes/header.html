@@ -6,8 +6,8 @@
 <header class="panel-cover" style="background-image: url({{ "images/cover.jpg" | prepend: site.baseurl }})">
   <div class="panel-main">
     <div class="panel-main__inner panel-inverted">
-    <a href="http://www.pixiv.net/member_illust.php?mode=medium&illust_id={{ site.pixiv.id }}" target="_blank" class="pixiv-title">{{ site.pixiv.name }}</a><br>
-    <a href="http://www.pixiv.net/member.php?id=4930871" target="_blank" class="pixiv-author">by: {{ site.pixiv.author}}</a>
+    <a href="http://www.pixiv.net/member_illust.php?mode=medium&illust_id={{ site.pixiv.imageId }}" target="_blank" class="pixiv-title">{{ site.pixiv.name }}</a><br>
+    <a href="http://www.pixiv.net/member.php?id={{ site.pixiv.authorId }}" target="_blank" class="pixiv-author">by: {{ site.pixiv.author}}</a>
       <div class="panel-main__content">
         <a href="{{ site.baseurl }}" title="link to home of {{ site.title }}">
           <img src="{{ "images/profile.jpg" | prepend: site.baseurl }}" class="user-image" alt="My Profile Photo">

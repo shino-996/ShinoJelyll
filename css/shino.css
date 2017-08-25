@@ -374,7 +374,7 @@ hr {
   position: relative;
   width: 100px;
   height: 100px;
-  border: 3px solid rgba(255, 255, 255, 0.8);
+  border: 3px solid;
   border-radius:100%;
   opacity: 0.8;
 }
@@ -394,7 +394,6 @@ hr {
     margin: 0 0 5px 0;
     font-size: 2.5em;
     letter-spacing: 4px;
-    color: rgba(0, 0, 0, 0.43);
 }
 
 .panel-subtitle {
@@ -444,7 +443,7 @@ hr {
 .panel-cover__divider {
     width: 50%;
     margin: 20px auto;
-    border-top: 1px solid rgba(255, 255, 255, 0.14);
+    border-top: 1px solid;
 }
 
 .panel-cover__divider--secondary {
@@ -486,9 +485,9 @@ hr {
     text-align: center;
     color: rgba(0, 0, 0, 0.5);
 }
-    .panel-inverted a {
+    /*.panel-inverted a {
         rgba(0, 0, 0, 0.73)
-    }
+    }*/
 
 .cover-navigation {
     margin-top: 10px;
@@ -509,7 +508,7 @@ hr {
     color: #e25440;
     -webkit-font-smoothing: antialiased;
 }
-    .btn:hover, .navigation__item a:hover {
+    .btn:hover {
         color: #b9301c;
         border-color: #b9301c;
     }
@@ -589,7 +588,6 @@ nav {
     .navigation__item a {
         display: block;
         position: relative;
-        opacity: .8;
     }
         .navigation__item a:hover {
             opacity: 1;
@@ -612,7 +610,6 @@ nav {
     right: 20px;
     bottom: 40px;
     font-weight: normal;
-    opacity: .6;
 }
     .pixiv-title:hover {
         opacity: 1;
@@ -623,7 +620,6 @@ nav {
     right: 20px;
     bottom: 20px;
     font-weight: normal;
-    opacity: .6;
 }
     .pixiv-author:hover {
         opacity: 1;

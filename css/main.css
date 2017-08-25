@@ -1,33 +1,74 @@
 @import url(shino.css);
 @import url(highlight.css);
 
+
+/*
+标题
+*/
+.panel-title {
+    color: #fff;
+}
+
+/*
+头像边框
+*/
+.user-image {
+    border-color: #fff;
+    opacity: 1.0;
+}
+
+/*
+介绍文字
+*/
+.panel-cover__description {
+    color: #fff;
+}
+
+/*
+分割线顔色
+*/
+.panel-cover__divider {
+    border-color: #fff;
+    opacity: 0.7;
+}
+
+/*
+导航按扭颜色
+*/
+.navigation__item a {
+    border-color: #fff;
+    color: #fff;
+    opacity: 0.7;
+}
+
 /*
 背景图信息文字颜色
 */
 .pixiv-title {
-    color: rgba(0, 0, 0, 0.73);
+    color: #fff;
+    opacity: 0.7;
 }
     .pixiv-title:hover {
-        color: #000;
+        color: #fff;
     }
 
 .pixiv-author {
-    color: rgba(0, 0, 0, 0.73);
+    color: #fff;
+    opacity: 0.7;
 }
     .pixiv-author:hover {
-        color: #000;
+        color: #fff;
     }
-
 
 /*
 背景图位置（通用）
 */
 .panel-cover {
-    background-position: top left;
+    background-position: bottom;
 }
 
 .panel-cover--collapsed {
-    background-position-x: 20%;
+    background-position-x: 50%;
 }
 
 /*
@@ -38,7 +79,7 @@
 背景图位置
 */
     .panel-cover {
-        background-position-x: 18%;
+        background-position-x: 50%;
     }
 
 /*
@@ -55,15 +96,3 @@
 .btn-mobile-menu {
     background: rgb(234, 213, 213);
 }
-
-/*
-导航按扭颜色
-*/
-.navigation__item a {
-    border-color: rgba(0, 0, 0, 0.58);
-    color: rgba(0, 0, 0, 0.73);
-}
-    .navigation__item a:hover {
-        color: #000;
-            border-color: #000;
-    }
