@@ -33,7 +33,7 @@ extension String {
         let encoding = CFStringConvertEncodingToNSStringEncoding(CFStringEncoding(cfEncoding.rawValue))
         //从GBK编码的Data里初始化NSString，返回的NSString是UTF-16编码
         if let str = NSString(data: gbkData, encoding: encoding) {
-            return str as String
+            self = str as String
         } else {
             return nil
         }
