@@ -7,4 +7,4 @@ sitemap:
     {{ site.url }}{{ post.url }}
 {% endfor %}
 
-https://shino.space/
+    https://shino.space/
