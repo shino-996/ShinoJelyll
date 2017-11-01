@@ -6,8 +6,8 @@
 <header class="panel-cover" style="background-image: url({{ "images/cover.jpg" | prepend: site.baseurl }})">
   <div class="panel-main">
     <div class="panel-main__inner panel-inverted">
-    <a href="http://www.pixiv.net/member_illust.php?mode=medium&illust_id={{ site.pixiv.imageId }}" target="_blank" class="pixiv-title">{{ site.pixiv.name }}</a><br>
-    <a href="http://www.pixiv.net/member.php?id={{ site.pixiv.authorId }}" target="_blank" class="pixiv-author">by: {{ site.pixiv.author}}</a>
+    <a href="http://www.pixiv.net/member_illust.php?mode=medium&illust_id={{ site.pixiv.image_id }}" target="_blank" class="pixiv-title">{{ site.pixiv.name }}</a><br>
+    <a href="http://www.pixiv.net/member.php?id={{ site.pixiv.author_id }}" target="_blank" class="pixiv-author">by: {{ site.pixiv.author}}</a>
       <div class="panel-main__content">
         <a href="{{ site.baseurl }}" title="link to home of {{ site.title }}">
           <img src="{{ "images/profile.jpg" | prepend: site.baseurl }}" class="user-image" alt="My Profile Photo">
@@ -78,9 +78,9 @@
             {% endif %}
               <!-- RSS -->
               <li class="navigation__item">
-                <a href="{{ site.baseurl }}feed.xml" title="RSS订阅" target="_blank">
+                <a href="{{ site.baseurl }}feed.xml" title="Atom订阅" target="_blank">
                   <i class="icon icon-RSS"></i>
-                  <span class="label">RSS</span>
+                  <span class="label">Atom</span>
                 </a>
               </li>
             </ul>

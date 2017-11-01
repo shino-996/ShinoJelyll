@@ -1,35 +1,46 @@
-# Site settings
+# 基本信息
 title: shino
 description: 'shino.space - shino 的个人网站'
 url: 'https://shino.space'
 baseurl: '/'
-google_analytics: 'UA-78168136-1'
 
+# 联系方式
 author:
   name: 'shino'
   email: shino@shino.space
   # twitter_username: shino_996
   github_username: shino-996
   # qq: 852217956
+google_analytics: 'UA-78168136-1'
 
+# 背景图
 pixiv:
-  imageId: 50726712
+  image_id: 50726712
   name: 夕焼けクルス
-  authorID: 648285
+  author_id: 648285
   author: mocha
 
+# liquid模板
 defaults:
   -
     scope:
       path: ''
       type: 'posts'
     values:
-        layout: 'post'
+      layout: 'post'
 
-# Build settings
+# 文件路径
 destination: _site
-paginate: 10
 permalink: /:year/:title/
+exclude: 
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - deploy.sh
+  - newpost.sh
+  - LICENSE
+
+# markdown相关
 markdown: kramdown
 excerpt_separator: <!-- more -->
 
@@ -44,14 +55,11 @@ kramdown:
       line_numbers: true
       start_line: 1
 
+# 插件
 plugins: 
   - 'jekyll-paginate'
   - 'jekyll-sitemap'
   - 'jekyll-feed'
-exclude: 
-  - 'README.md'
-  - 'Gemfile'
-  - 'Gemfile.lock'
-  - 'deploy.sh'
-  - "newpost.sh"
-  - "urls.txt"
+
+paginate: 10
+paginate_path: /page:num
