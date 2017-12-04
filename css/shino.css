@@ -277,8 +277,8 @@ pre.highlight code,
 }
 
 .content-wrapper__inner {
-    margin: 0 10%;
-    padding: 50px 0;
+    margin: 0 5%;
+    padding: 50px 0 0 0;
 }
 
 .footer {

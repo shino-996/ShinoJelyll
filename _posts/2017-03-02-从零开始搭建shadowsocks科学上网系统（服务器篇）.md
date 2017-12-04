@@ -97,7 +97,7 @@ vps$ sh -c 'printf "deb http://httpredir.debian.org/debian jessie-backports main
 
 ~~~ sh
 vps$ apt-get update
-vps$ apt-get install gettext build-essential autoconf libtool libpcre3-dev asciidoc xmlto libev-dev libudns-dev automake libmbedtls-dev
+vps$ apt-get install --no-install-recommends gettext build-essential autoconf libtool libpcre3-dev asciidoc xmlto libev-dev libudns-dev automake libmbedtls-dev
 ~~~
 
 最新版的shadowsocks-libev采用了新的加密算法，它的依赖包`libsodium`通过apt-get得到的版本太旧了，需要找源码安装：
