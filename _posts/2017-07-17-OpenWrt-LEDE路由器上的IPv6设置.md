@@ -1,5 +1,5 @@
 ---
-title: OpenWrt/LEDE路由器上的IPv6设置
+title: OpenWrt / LEDE路由器上的IPv6设置
 date: 2017-07-17 14:13:54 +0800
 tags: 
 - 计算机

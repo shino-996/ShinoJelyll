@@ -1,5 +1,5 @@
 ---
-title: Openwrt/LEDE路由器上的IPv6 NAT
+title: Openwrt / LEDE路由器上的IPv6 NAT
 date: 2017-12-03 17:02:46 +0800
 tags: 
 - 计算机
