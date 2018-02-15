@@ -33,10 +33,22 @@ table {
     border-spacing: 0;
     margin-bottom: 1.3em;
 }
+    .rouge-table {
+        background-color: #2b303b;
+        table-layout: fixed;
+        width: 100%;
+    }
 
-th, td {
-    border: 2px solid #d6dbdf;
-    padding: 8px;
+    .rouge-table pre {
+        overflow-x: auto;
+    }
+
+    .rouge-table td {
+        padding: 5px;
+    }
+
+td.rouge-gutter.gl {
+    width: 5%;
 }
 
 th {
@@ -169,22 +181,19 @@ code {
 }
 
 pre {
-    margin-bottom: 1.3em;
     border-radius: 3px;
     font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
-    font-size: .9em;
     font-weight: normal;
     line-height: 1.3em;
 }
-    pre code {
-        padding: 0;
-        background: none;
-        border: none;
-    }
+pre code {
+    padding: 0;
+    background: none;
+    border: none;
+}
 
-pre.highlight,
-.highlight pre {
-  padding: 10px;
+pre.lineno {
+    text-align: center;
 }
 
 pre.highlight code,
@@ -355,9 +364,7 @@ hr {
     border-radius: 3px;
     text-align: center;
 }
-.post pre {
-    width: 95%;
-}
+
 .post hr {
     display: block;
     width: 30%;
