@@ -140,7 +140,7 @@ fe80::/64 dev wlan0  proto kernel  metric 256  pref medium
 知道问题原因就好办了, 只要添加上一条允许任何源地址的流量经外网接口流出默认网关即可:
 
 ~~~ sh
-lede$ ip -6 route add default fe80::5a69:6cff:fe91:13ba via eth0.2
+lede$ ip -6 route add default via fe80::5a69:6cff:fe91:13ba dev eth0.2
 ~~~
 
 至此, 内网设备可以正常使用 IPv6 访问网络, 最后附上一张流程图作为总结:
