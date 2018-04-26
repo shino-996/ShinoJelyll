@@ -34,7 +34,6 @@ table {
     margin-bottom: 1.3em;
 }
     .rouge-table {
-        background-color: #2b303b;
         table-layout: fixed;
         width: 100%;
     }
@@ -194,6 +193,10 @@ pre code {
 
 pre.lineno {
     text-align: center;
+}
+
+pre.highlight {
+    background-color: #2b303b;
 }
 
 pre.highlight code,
