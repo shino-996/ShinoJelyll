@@ -86,7 +86,7 @@
 下拉菜单颜色
 */
     .navigation-wrapper {
-    background: rgba(234, 213, 213, 0.43);
+        background: rgba(120, 194, 221, .4);
     }
 }
 
@@ -94,5 +94,6 @@
 手机视图下菜单按扭颜色
 */
 .btn-mobile-menu {
-    background: rgb(234, 213, 213);
+    background: #51A8DD;
+    opacity: 0.8;
 }
