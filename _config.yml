@@ -15,10 +15,10 @@ google_analytics: 'UA-78168136-1'
 
 # 背景图
 pixiv:
-  image_id: 50726712
-  name: 夕焼けクルス
-  author_id: 648285
-  author: mocha
+  image_id: 68126514
+  name: 無題
+  author_id: 9790122
+  author: smile
 
 # liquid模板
 defaults:
