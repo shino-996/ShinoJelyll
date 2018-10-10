@@ -1016,6 +1016,9 @@ div.highlighter-rouge {
 .icon-social-twitter:before {
     content: "\f1e4";
 }
+.icon-link:before {
+    content: "\f1ad";
+}
 .icon-RSS:before {
     content: "\f1aa";
 }
