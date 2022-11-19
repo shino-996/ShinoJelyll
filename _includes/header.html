@@ -3,14 +3,14 @@
   <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
 </span>
 
-<header class="panel-cover" style="background-image: url({{ "images/cover.jpg" | prepend: site.baseurl }})">
+<header class="panel-cover" style="background-image: url('/images/cover.jpg')">
   <div class="panel-main">
     <div class="panel-main__inner panel-inverted">
     <a href="http://www.pixiv.net/member_illust.php?mode=medium&illust_id={{ site.pixiv.image_id }}" target="_blank" class="pixiv-title">{{ site.pixiv.name }}</a><br>
     <a href="http://www.pixiv.net/member.php?id={{ site.pixiv.author_id }}" target="_blank" class="pixiv-author">by: {{ site.pixiv.author}}</a>
       <div class="panel-main__content">
-        <a href="{{ site.baseurl }}" title="link to home of {{ site.title }}">
-          <img src="{{ "images/profile.jpg" | prepend: site.baseurl }}" class="user-image" alt="My Profile Photo">
+        <a href="/" title="link to home of {{ site.title }}">
+          <img src="/images/profile.jpg" class="user-image" alt="My Profile Photo">
           <h1 class="panel-cover__title panel-title">{{ site.title }}</h1>
         </a>
         <hr class="panel-cover__divider">
@@ -21,15 +21,15 @@
 
           <nav class="cover-navigation cover-navigation--primary">
             <ul class="navigation">
-              <li class="navigation__item"><a href="{{ site.baseurl }}#blog" class="blog-button">文章</a></li>
+              <li class="navigation__item"><a href="/#blog" class="blog-button">文章</a></li>
             </ul>
 
             <ul class="navigation">
-              <li class="navigation__item"><a href="{{ site.baseurl }}2016/%E5%85%B3%E4%BA%8Eshino-space/" class="blog-button">关于</a></li>
+              <li class="navigation__item"><a href="/2016/%E5%85%B3%E4%BA%8Eshino-space/" class="blog-button">关于</a></li>
             </ul>
 
             <ul class="navigation">
-              <li class="navigation__item"><a href="{{ site.baseurl }}tags/" class="blog-button">归档</a></li>
+              <li class="navigation__item"><a href="/tags/" class="blog-button">归档</a></li>
             </ul>
           </nav>
 
@@ -78,14 +78,14 @@
             {% endif %}
               <!-- RSS -->
               <li class="navigation__item">
-                <a href="{{ site.baseurl }}feed.xml" title="Atom订阅" target="_blank">
+                <a href="/feed.xml" title="Atom订阅" target="_blank">
                   <i class="icon icon-RSS"></i>
                   <span class="label">Atom</span>
                 </a>
               </li>
               <!-- 友链 -->
               <li class="navigation__item">
-                <a href="{{ site.baseurl }}friends/" title="友情链接" target="_blank">
+                <a href="/friends/" title="友情链接" target="_blank">
                   <i class="icon icon-link"></i>
                   <span class="label">Atom</span>
                 </a>
