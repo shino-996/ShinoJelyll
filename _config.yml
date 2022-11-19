@@ -30,7 +30,7 @@ defaults:
       layout: 'post'
 
 # 文件路径
-destination: _site
+destination: ./_site
 permalink: /:year/:title/
 exclude: 
   - README.md
@@ -55,6 +55,9 @@ kramdown:
       line_numbers: true
       start_line: 1
       line_format: '%2i'
+
+# 插件
+plugins: [jekyll-paginate, jekyll-sitemap, jekyll-feed]
 
 # jekyll-paginate设置
 paginate: 10
